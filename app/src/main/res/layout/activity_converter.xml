@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:padding="16dp"
+    app:cardUseCompatPadding="true"
+    app:cardMaxElevation="1dp"
+    app:cardElevation="1dp"
+    app:cardCornerRadius="5dp"
+    tools:context="com.example.android.cryptorate.ConverterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/btc_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 Bitcoin ="
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/other_currency_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="17.455 Ethereum"
+                android:padding="8dp"
+                android:textSize="24sp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@id/btc_text_view"/>
+
+            <View
+                android:id="@+id/horizontal_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_below="@id/other_currency_text_view"
+                android:background="@color/cardview_shadow_start_color"/>
+
+            <EditText
+                android:id="@+id/btc_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="88dp"
+                android:inputType="numberDecimal"
+                android:text="1"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/horizontal_line"/>
+
+            <TextView
+                android:id="@+id/btc_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BTC"
+                android:padding="8dp"
+                android:textAllCaps="true"
+                android:layout_marginTop="16dp"
+                android:layout_toRightOf="@id/btc_edit_text"
+                android:layout_below="@id/horizontal_line"/>
+
+            <EditText
+                android:id="@+id/currency_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="88dp"
+                android:inputType="numberDecimal"
+                android:text="17"
+                android:layout_below="@id/btc_edit_text"/>
+
+            <TextView
+                android:id="@+id/currency_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textAllCaps="true"
+                android:text="ETH"
+                android:layout_toRightOf="@id/currency_edit_text"
+                android:layout_below="@id/btc_edit_text"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.v7.widget.CardView>

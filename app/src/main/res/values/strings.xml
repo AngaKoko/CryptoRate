@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CryptoRate</string>
+
+    <!--Label of the ConverterActivity -->
+    <string name="converter_activity_lable">Converter</string>
+
+    <!--String to display in a situation where there is no list of data to show -->
+    <string name="no_data_to_show">Opps! no data found</string>
+
+    <!--String to display when there is no internet connection -->
+    <string name="no_internet_connection">Check your internet connection and try again</string>
+</resources>
