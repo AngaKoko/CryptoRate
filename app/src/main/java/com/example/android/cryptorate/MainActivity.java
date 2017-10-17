@@ -14,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.cryptorate.utilities.ConverterAdapter;
 import com.example.android.cryptorate.utilities.RatesLoader;
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     void refreshItems(){
-        //Restart our loader manager Already disposed: Module: 'app'
+        //Restart Loader
         getLoaderManager().restartLoader(RATES_LOADER_ID, null, MainActivity.this);
 
         //Load Complete

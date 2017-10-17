@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:text="17.455 Ethereum"
                 android:padding="8dp"
-                android:textSize="24sp"
+                style="@android:style/TextAppearance.Large"
                 android:layout_below="@id/bitcoin_text"/>
 
         </RelativeLayout>
