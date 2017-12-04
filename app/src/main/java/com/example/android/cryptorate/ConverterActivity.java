@@ -77,10 +77,19 @@ public class ConverterActivity extends AppCompatActivity {
                     //make exchangeRateEditText empty if btcEditText is empty
                     exchangeRateEditText.setText("");
                 }else {
-                    //Calculate the value in selected currency
-                    //and set exchangeRateEditText to calculated value
-                    mBTCValue = Double.parseDouble(btcValue);
-                    exchangeRateEditText.setText(String.format("%.2f",calculateCurrency(mBTCValue, mExchangeRate)));
+                    double i = -1;
+                    /**
+                     * Try and catch block for NumberFormatException
+                     * Prevents crash
+                     */
+                    try {
+                        i = Double.parseDouble(btcValue);
+
+                        //Calculate the value in selected currency
+                        //and set exchangeRateEditText to calculated value
+                        mBTCValue = i;
+                        exchangeRateEditText.setText(String.format("%.2f", calculateCurrency(mBTCValue, mExchangeRate)));
+                    }catch(NumberFormatException e){}
                 }
             }
             @Override
@@ -105,10 +114,17 @@ public class ConverterActivity extends AppCompatActivity {
                         //make btcEditText empty if btcEditText is empty
                         btcEditText.setText("");
                     }else {
-                        //Calculate the value on selected currency in BTC
-                        //set btcEditText to calculated value
-                        double value = Double.parseDouble(currencyValue);
-                        btcEditText.setText(String.valueOf(calculateBTC(value, mExchangeRate)));
+                        double i = -1;
+                        /**
+                         * Try and catch block for NumberFormatException
+                         * Prevents crash
+                         */
+                        try {
+                            i = Double.parseDouble(currencyValue);
+                            //Calculate the value on selected currency in BTC
+                            //set btcEditText to calculated value
+                            btcEditText.setText(String.valueOf(calculateBTC(i, mExchangeRate)));
+                        }catch(NumberFormatException e){}
                     }
 
                     return true;
